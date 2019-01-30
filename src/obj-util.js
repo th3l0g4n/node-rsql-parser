@@ -1,11 +1,6 @@
 var objUtil = exports;
 
-var logger = require('./logger');
-
 objUtil.isEmpty = function(obj) {
-	logger.debug('typeof obj-------', typeof obj);
-	logger.debug('content of obj-------', obj); 
-
 	// when obj is null or undefined
 	if (!obj) {
 		return true;
@@ -16,6 +11,5 @@ objUtil.isEmpty = function(obj) {
 		return true;
 	}
 
-	logger.debug('obj is not empty!');
 	return false;
 }

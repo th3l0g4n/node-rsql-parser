@@ -162,7 +162,7 @@ function tokenizeRsqlSection(sectionString) {
         // single element - should be operation unit itself
         // assign to sectionUnit only if it is not empty
         if (!objUtil.isEmpty(sectionString)) {
-            sectionUnit = sectionString;
+            sectionUnit = rsqlParser.tokenizeOperator(sectionString, rsqlParser.getOperator(sectionString));
         }
     }
     return sectionUnit;
